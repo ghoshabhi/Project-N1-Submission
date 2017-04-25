@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Project N1</title>
+  </head>
+  <body>
+    <h3 class="center-align" style="color:cornflowerblue">Heroku PostgreSQL Demo</h3>
+    <hr />
+    <div class="container">
+      <table class="highlight centered responsive-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody>
+           <% students.forEach(function(student) { %>
+            <tr>
+              <td><%= student.id %></td>
+              <td><%= student.first_name %></td>
+              <td><%= student.last_name %></td>
+              <td><%= student.email %></td>
+            </tr>
+           <% }); %>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
